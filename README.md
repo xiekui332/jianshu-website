@@ -74,4 +74,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### yarn add styled-components  安装样式管理组件
 
+### styled-components新本版injectGlobal => createGlobalStyle
+
+### yarn add redux 表示是个数据框架 redux yarn add react-redux 表示在raact中使用redux
+
 ### 
+
