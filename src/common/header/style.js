@@ -129,5 +129,41 @@ export const SearchWrapper = styled.div`
             color:#fff;
         }
     }
-`
+`;
+
+export const SearchInfo = styled.div`
+    position:absolute;
+    left:0;
+    width:240px;
+    padding:0 20px;
+    top:56px;
+    background:origin;
+    box-shadow:0 0 8px rgba(0,0,0,.2);
+`;
+
+export const SearchTitle = styled.div`
+    color:#969696;
+    line-height:20px;
+    font-size:14px;
+    margin:20px 0 15px 0; 
+`;
+
+export const SearchSwitch = styled.div`
+    float:right;
+    font-size:13px;
+`;
+
+export const SearchItem = styled.a`
+    display:block;
+    font-size:12px;
+    line-height:20px;
+    padding:0 5px;
+    border:1px solid #ddd;
+    color:#787878;
+    border-radius:3px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+`;
+
 

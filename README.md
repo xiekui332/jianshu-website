@@ -78,5 +78,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### yarn add redux 表示是个数据框架 redux yarn add react-redux 表示在raact中使用redux
 
+### install immutable 确保state不会被直接修改
+
+### create-react-app 底层也是一个node服务器 当访问一个路径是会先到工程目录下（src）看有没有对应的路由 找不到会在去       public目录下查找 有的话会输出出来
+
 ### 
 
