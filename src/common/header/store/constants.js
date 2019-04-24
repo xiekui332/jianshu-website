@@ -1,3 +1,7 @@
 export const SEARCH_FOCUS = 'header/SEARCH_FOCUS'
 export const SEARCH_BLUR = 'header/SEARCH_BLUR'
 export const CHANFE_LIST = 'header/CHANFE_LIST'
+export const CHANGE_ENTER = 'header/CHANGE_ENTER'
+export const CHANGE_LEAVE = 'header/CHANGE_LEAVE'
+export const SET_PAGE = 'header/SET_PAGE'
+export const ADD_COUNT = 'header/ADD_COUNT'

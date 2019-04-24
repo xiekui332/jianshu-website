@@ -2,6 +2,18 @@ import { constants }  from './index'
 import axios from 'axios'
 import { fromJS } from 'immutable'
 
+
+const changeList = (data) => ({
+    type:constants.CHANFE_LIST,
+    data:fromJS(data),
+    totalPage:Math.ceil(data.length / 10)
+});
+
+export const setPage = (page) => ({ 
+    type:constants.SET_PAGE,
+    page
+});
+
 export const searchFocus = () => ({ 
     type: constants.SEARCH_FOCUS,
     focused:true
@@ -12,10 +24,18 @@ export const searchBlur = () => ({
     focused:false
 });
 
-const changeList = (data) => ({
-    type:constants.CHANFE_LIST,
-    data:fromJS(data)
-})
+// 鼠标移入热门搜所得展示
+export const changeEnter = () => ({
+    type: constants.CHANGE_ENTER,
+    mouseEnter:true
+});
+
+// 鼠标移出热门搜所得展示
+export const changeLeave = () => ({
+    type: constants.CHANGE_LEAVE,
+    mouseEnter:false
+});
+
 
 export const getList = () => {
     return (dispatch) => {
@@ -34,4 +54,10 @@ export const getList = () => {
             console.log(err)
         })
     }
-}
+};
+
+// 修改旋转度数
+export const addCount = (count) => ({
+    type: constants.ADD_COUNT,
+    count
+});

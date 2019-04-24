@@ -116,7 +116,7 @@ export const SearchWrapper = styled.div`
         width:160px;
         transition:all .3s ease-out;
     }
-    .iconfont{
+    .zoom{
         position:absolute;
         right:5px;
         bottom:5px;
@@ -151,6 +151,13 @@ export const SearchTitle = styled.div`
 export const SearchSwitch = styled.div`
     float:right;
     font-size:13px;
+    cursor:pointer;
+    position:relative;
+    .spin{
+        display:inline-block;
+        transform-origin:center center;
+        transition:all .2s ease-in;
+    }
 `;
 
 export const SearchItem = styled.a`
@@ -164,6 +171,7 @@ export const SearchItem = styled.a`
     float:left;
     margin-right:10px;
     margin-bottom:10px;
+    cursor:pointer;
 `;
 
 
