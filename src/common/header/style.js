@@ -139,6 +139,7 @@ export const SearchInfo = styled.div`
     top:56px;
     background:origin;
     box-shadow:0 0 8px rgba(0,0,0,.2);
+    background:#fff;
 `;
 
 export const SearchTitle = styled.div`
