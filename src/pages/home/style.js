@@ -72,7 +72,7 @@ export const ListItem = styled.div`
 
 export const ListInfo = styled.div`
     padding-right:170px;
-    a{  
+    .title{  
         display:block;
         margin: -7px 0 4px;
         color: #333;
@@ -92,7 +92,20 @@ export const ListInfo = styled.div`
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
+        text-decoration: none;
     }
+`;
+
+export const LoadMore = styled.div`
+    width:100%;
+    height:40px;
+    line-height:40px;
+    margin:30px 0;
+    background:#a5a5a5; 
+    text-align:center;
+    border-radius:20px;
+    color:#fff;
+    cursor:pointer;
 `;
 
 
@@ -129,4 +142,15 @@ export const DownloadApp = styled.a.attrs({
     border-radius: 6px;
     background-color: #fff;
 
+`;
+
+// 回到顶部
+export const BackTop = styled.div`
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    padding:20px 5px;
+    font-size:12px;
+    border:1px solid #dcdcdc;
+    cursor:pointer;
 `;

@@ -9,17 +9,15 @@ import Detail from './pages/details'
 function App() {
   return (
     <Provider store={store}>
-      <div>
-        <Header />
         <BrowserRouter>
             <div>
+                <Header />
                 {/* <Route path="/home" exact render={() => <Home />}></Route>
                 <Route path="/detail" exact render={() => <Detail />}></Route> *or */}
                 <Route path="/home" exact component={Home} ></Route>
                 <Route path="/detail" exact component={Detail} ></Route>
             </div>
-        </BrowserRouter>
-      </div>
+        </BrowserRouter>  
     </Provider>
   );
 }

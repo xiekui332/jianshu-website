@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-class Write extends Component {
+class Write extends PureComponent {
     render() {
         return (
             <div>
