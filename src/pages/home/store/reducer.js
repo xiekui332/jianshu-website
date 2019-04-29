@@ -15,6 +15,14 @@ const defaultState = fromJS({
 
 const changeHomeData = (state, action) => {
     return state.merge({
+        topicList:fromJS(action.list.topicList),
+        articleList:fromJS(action.list.articleList),
+        RecommendList:fromJS(action.list.RecommendList)
+    })
+}
+
+const addHomeData = (state, action) => {
+    return state.merge({
         topicList:fromJS(state.toJS().topicList.concat(action.list.topicList)),
         articleList:fromJS(state.toJS().articleList.concat(action.list.articleList)),
         RecommendList:fromJS(state.toJS().RecommendList.concat(action.list.RecommendList)),
@@ -26,6 +34,8 @@ export default ((state = defaultState, action) => {
     switch(action.type) {
         case constants.CHANGE_HOEM_DATA:
         return changeHomeData(state, action)
+        case constants.ADD_HOEM_DATA:
+        return addHomeData(state, action)
         default:
         return state;
     }

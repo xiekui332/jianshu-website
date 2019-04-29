@@ -5,17 +5,18 @@ import { actionCreators } from '../store'
 import {
     ListItem,
     ListInfo,
-    LoadMore
+    LoadMore,
+    LinkBox
 } from '../style'
 
 class List extends PureComponent {
     render() {
         const { articleList, loadMore, pages } = this.props;
         return (
-            <div>
+            <LinkBox>
                 {
                     articleList.map((item, index) => (
-                        <Link to="/detail" key={item.get('id')}>
+                        <Link to={"/detail/" + item.get('id')} key={item.get('id')} >
                             <ListItem>
                                 <img alt="" src="https://oimagea8.ydstatic.com/image?id=304297443776517614&product=adpublish&w=300&h=200&sc=0&rm=2&gsb=0&gsbd=60" />
                                 <ListInfo>
@@ -35,7 +36,7 @@ class List extends PureComponent {
                     this.handleLoadMore(pages, loadMore)
                     
                 }
-            </div>
+            </LinkBox>
         )
     }
 

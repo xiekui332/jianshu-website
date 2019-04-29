@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { CSSTransition } from 'react-transition-group'
 import { actionCreators } from './store'
- 
+import { actionCreators as loginActionCreators } from '../../pages/login/store'
+import { Link } from 'react-router-dom'
+  
 import { 
     HeaderWrapper,
     Logo,
@@ -76,10 +78,12 @@ class Header extends PureComponent {
     }
 
     render() {
-        const { focused, list, handleInputFocus } = this.props;
+        const { focused, list, handleInputFocus, login, logout } = this.props;
         return (
             <HeaderWrapper>
-                <Logo />
+                <Link to="/">
+                    <Logo />
+                </Link>
                 <Nav>
                     <NavItem className='left active'>
                         首页
@@ -87,9 +91,13 @@ class Header extends PureComponent {
                     <NavItem className='left'>
                         下载APP
                     </NavItem>
-                    <NavItem className='right'>
-                        登陆
-                    </NavItem>
+                    {
+                        login?
+                        <NavItem className='right' onClick={logout}>退出</NavItem>:
+                        <Link to="/login">
+                            <NavItem className='right'>登陆 </NavItem>
+                        </Link>
+                    }
                     <NavItem className='right'>
                         <span className="iconfont">&#xe636;</span>
                     </NavItem>
@@ -135,7 +143,8 @@ const mapStateToProps = (state) => {
         mouseEnter:state.getIn(['header', 'mouseEnter']),
         page:state.getIn(['header', 'page']),
         totalPage:state.getIn(['header', 'totalPage']),
-        count:state.getIn(['header', 'count'])
+        count:state.getIn(['header', 'count']),
+        login:state.getIn(['login', 'login'])
     }
 }
 
@@ -176,6 +185,11 @@ const mapDispatchToProps = (dispatch) => {
             }else{
                 dispatch(actionCreators.setPage(1))
             }
+        },
+
+        // logout
+        logout() {
+            dispatch(loginActionCreators.logout())
         }
     }
 }

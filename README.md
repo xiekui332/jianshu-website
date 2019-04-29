@@ -84,5 +84,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### install react-router-dom 最新react路由
 
-### 
+### 1-this.props.match.params.id 动态路由获取参数   2-使用?id=这种方式传参，但需要手动解析字符串
+
+### 上线请使用HashRouter在App.js中
 

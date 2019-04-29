@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 export const HomeWrapper = styled.div`
     width:960px;
     margin:0 auto;
@@ -59,6 +60,12 @@ export const TopicText = styled.span`
 
 
 // list.js
+export const LinkBox = styled.div`
+    a{
+        text-decoration:none;
+    }
+`;
+
 export const ListItem = styled.div`
     padding:20px 0;
     border-bottom:1px solid #dcdcdc;
@@ -81,7 +88,6 @@ export const ListInfo = styled.div`
         font-weight: 700;
         margin-top: -4px;
         cursor: pointer;
-        text-decoration: none;
     }
     .title:hover{
         text-decoration: underline;
@@ -92,7 +98,7 @@ export const ListInfo = styled.div`
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        text-decoration: none;
+        color:#666;
     }
 `;
 

@@ -31,7 +31,7 @@ export const loadMoreData = () => {
             if(res.status === 200){
                 let result = res.data.data
                 let action = {
-                    type:constants.CHANGE_HOEM_DATA,
+                    type:constants.ADD_HOEM_DATA,
                     list:result
                 }
                 dispatch(action)
